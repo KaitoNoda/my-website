@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from "components/Timeline/Timeline.module.css"
 
 const Timeline: React.FC = () => {
     return (
-        <div className={styles.timeline}>
+        <div>
             <p>Timeline</p>
         </div>
     )

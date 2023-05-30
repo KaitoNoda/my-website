@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from "components/Portfolios/Portfolios.module.css"
 
 const Portfolios: React.FC = () => {
     return (
-        <div className={styles.portfolios}>
+        <div>
             <p>Portfolios</p>
         </div>
     )
