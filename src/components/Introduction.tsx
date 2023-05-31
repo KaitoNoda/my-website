@@ -13,11 +13,17 @@ const Introduction: React.FC = () => {
       color: 'black', 
     }}>
       <Box sx={{ flex: '1' }}>
-        <h1>Here is who I am</h1>
-        <p> Hello</p>
+        <h1 style={{ fontSize:'40px'}}>Here is who I am</h1>
+        <p style={{ fontSize:'20px'}}> First of all, 
+            thank you for visiting my website. I am glad 
+            you took this opportunity to know me more. I am originally from Japan and am currently a 
+           <strong> computer 
+            science student </strong> at the University of British Columbia (UBC). 
+            My goal is to become an expert <strong>software engineer</strong> specializing in
+            web development. </p>
       </Box>
       <Box sx={{ flex: '1' }}>
-        <img src="/face.png"/>
+        <img src="/face.png" style={{ width: '100%',height: 'auto' }} />
       </Box>
     </Box>
   );
