@@ -8,6 +8,10 @@ const HeaderButton = styled(Button)({
   color: "#111111",
 });
 
+const IconButton = styled('a')({
+  color: "#111111",
+});
+
 const Header: React.FC = () => {
   return (
     <Box sx={{
@@ -16,6 +20,8 @@ const Header: React.FC = () => {
       boxSizing: "border-box",
     }}>
       <Box sx={{
+        display: "flex",
+        justifyContent: "space-between",
         width: "60%",
         borderBottom: "1px solid #111111",
         margin: "0 auto",
@@ -26,6 +32,14 @@ const Header: React.FC = () => {
           <HeaderButton>Portfolios</HeaderButton>
           <HeaderButton>Skills</HeaderButton>
           <HeaderButton>Contact</HeaderButton>
+        </Box>
+        <Box sx={{ display: "flex" }}>
+          <IconButton href="https://github.com/kaitonoda" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={30} />
+          </IconButton>
+          <IconButton href="https://linkedin.com/in/kaitonoda" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={30} />
+          </IconButton>
         </Box>
       </Box>
     </Box>
