@@ -1,19 +1,35 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import Box from '@mui/system/Box';
+import { styled } from '@mui/system';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
+const HeaderButton = styled(Button)({
+  color: "#111111",
+});
 
 const Header: React.FC = () => {
-    return (
-      <header style={{
-        backgroundColor: 'blue',
-        width: '100%',
-        height: '100px',
-        padding: '20px',
-        textAlign: 'center',
-        color: 'white',
-        marginTop: '0px',
+  return (
+    <Box sx={{
+      backgroundColor: "#e3dddd",
+      padding: "30px",  
+      boxSizing: "border-box",
     }}>
-            <h1>Header</h1>
-        </header>
-    )
-}
+      <Box sx={{
+        width: "60%",
+        borderBottom: "1px solid #111111",
+        margin: "0 auto",
+      }}>
+        <Box sx={{ display: "flex" }}>
+          <HeaderButton>About Me</HeaderButton>
+          <HeaderButton>Timeline</HeaderButton>
+          <HeaderButton>Portfolios</HeaderButton>
+          <HeaderButton>Skills</HeaderButton>
+          <HeaderButton>Contact</HeaderButton>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
 
 export default Header;
