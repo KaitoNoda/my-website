@@ -6,10 +6,19 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const HeaderButton = styled(Button)({
   color: "#111111",
+  textDecoration: "none",
+  marginRight: "20px",
+  position: "relative",
+  overflow: "hidden",
+  borderRadius: "0",
+  fontSize: "20px",
 });
 
 const IconButton = styled('a')({
   color: "#111111",
+  marginLeft: "20px",
+  cursor: "pointer",
+  transition: "color 0.3s",
 });
 
 const Header: React.FC = () => {
@@ -47,3 +56,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
