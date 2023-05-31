@@ -19,9 +19,9 @@ const Home: React.FC = () => {
             }}>
                 <Header />
                 <Introduction />
-                <Portfolios />
                 <Timeline />
                 <Skills />
+                <Portfolios />
                 <Footer />
             </div>
         </>
