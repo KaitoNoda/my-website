@@ -48,7 +48,8 @@ const Header: React.FC = () => {
       <Box sx={{
         display: "flex",
         justifyContent: "space-between",
-        width: "60%",
+        alignItems:"center",
+        width: "70%",
         borderBottom: "1px solid #111111",
         margin: "0 auto",
       }}>
@@ -61,10 +62,10 @@ const Header: React.FC = () => {
         </Box>
         <Box sx={{ display: "flex" }}>
           <IconButton href="https://github.com/kaitonoda" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={30} />
+            <FaGithub size={40} />
           </IconButton>
           <IconButton href="https://linkedin.com/in/kaitonoda" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={30} />
+            <FaLinkedin size={40} />
           </IconButton>
         </Box>
       </Box>
