@@ -12,6 +12,20 @@ const HeaderButton = styled(Button)({
   overflow: "hidden",
   borderRadius: "0",
   fontSize: "20px",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    bottom: "0",
+    left: "50%",
+    width: "0",
+    height: "2px",
+    backgroundColor: "#111111",
+    transition: "all 0.3s",
+    transform: "translateX(-50%)",
+  },
+  "&:hover::after": {
+    width: "100%",
+  },
 });
 
 const IconButton = styled('a')({
@@ -19,6 +33,9 @@ const IconButton = styled('a')({
   marginLeft: "20px",
   cursor: "pointer",
   transition: "color 0.3s",
+  "&:hover": {
+    color: "gray",
+  },
 });
 
 const Header: React.FC = () => {
