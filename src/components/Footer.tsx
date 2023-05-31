@@ -2,7 +2,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer style={{
+        <footer id ="footer" 
+            style={{
             backgroundColor: 'blue',
             width: '100%',
             height: '100px',
@@ -12,8 +13,7 @@ const Footer: React.FC = () => {
             marginBottom: '0px',
         }}>
             <h1>Footer</h1>
-        </footer>
-    )
+        </footer>    )
 }
 
 export default Footer;

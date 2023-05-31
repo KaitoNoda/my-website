@@ -2,7 +2,8 @@ import React from 'react';
 
 const Skills: React.FC = () => {
     return (
-        <div style={{
+        <div id ="skills" 
+            style={{
             backgroundColor: 'blue',
             width: '300px',
             height: '300px',

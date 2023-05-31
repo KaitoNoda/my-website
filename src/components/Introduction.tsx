@@ -2,7 +2,8 @@ import React from 'react';
 
 const Introduction: React.FC = () => {
     return (
-        <div style={{
+        <div id ="aboutMe" 
+             style={{
             backgroundColor: 'blue',
             width: '300px',
             height: '300px',

@@ -54,11 +54,11 @@ const Header: React.FC = () => {
         margin: "0 auto",
       }}>
         <Box sx={{ display: "flex" }}>
-          <HeaderButton>About Me</HeaderButton>
-          <HeaderButton>Timeline</HeaderButton>
-          <HeaderButton>Portfolios</HeaderButton>
-          <HeaderButton>Skills</HeaderButton>
-          <HeaderButton>Contact</HeaderButton>
+          <HeaderButton href = "#aboutMe">About Me</HeaderButton>
+          <HeaderButton href = "#timeline">Timeline</HeaderButton>
+          <HeaderButton href = "#portfolios">Portfolios</HeaderButton>
+          <HeaderButton href = "#skills">Skills</HeaderButton>
+          <HeaderButton href = "#contact">Contact</HeaderButton>
         </Box>
         <Box sx={{ display: "flex" }}>
           <IconButton href="https://github.com/kaitonoda" target="_blank" rel="noopener noreferrer">
