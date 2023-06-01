@@ -1,9 +1,10 @@
 import React from 'react';
 import Box from '@mui/system/Box';
+import Paper from '@mui/material/Paper';
 
 const Introduction: React.FC = () => {
   return (
-    <Box id="aboutMe" 
+    <Paper elevation={4} 
       sx={{
       display: 'flex',
       backgroundColor: '#e3dddd',
@@ -25,7 +26,7 @@ const Introduction: React.FC = () => {
       <Box sx={{ flex: '0.3' }}> 
         <img src="/face.png" style={{ height: '100%' }} />
       </Box>
-    </Box>
+    </Paper>
   );
 }
 
