@@ -13,7 +13,7 @@ const Introduction: React.FC = () => {
       margin: '150px auto',
       color: 'black', 
     }}>
-      <Box sx={{ flex: '0.7' }} > 
+      <Box sx={{ flex: '0.7',marginTop:"10px", marginLeft:"20px" }} > 
         <h1 style={{ fontSize:'40px'}}>Here is who I am</h1>
         <p style={{ fontSize:'20px'}}> First of all, 
             thank you for visiting my website. I am glad 
