@@ -1,31 +1,34 @@
-import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Introduction from 'components/Introduction';
-import Portfolios from 'components/Portfolios';
-import Timeline from 'components/Timeline';
-import Skills from 'components/Skills';
-import { CssBaseline } from '@mui/material';
+import React from "react";
+import Header from "components/Header";
+import Footer from "components/Footer";
+import Introduction from "components/Introduction";
+import Portfolios from "components/Portfolios";
+import Timeline from "components/Timeline";
+import Skills from "@/components/MyInterests";
+import { CssBaseline } from "@mui/material";
+import MyInterests from "@/components/MyInterests";
 
 const Home: React.FC = () => {
-    return (
-        <>
-            <CssBaseline />
-            <div style={{
-                backgroundColor: '#e3dddd',
-                margin: 0,
-                padding: 0,
-                boxSizing: 'border-box',
-            }}>
-                <Header />
-                <Introduction />
-                <Timeline />
-                <Skills />
-                <Portfolios />
-                <Footer />
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <CssBaseline />
+      <div
+        style={{
+          backgroundColor: "#e3dddd",
+          margin: 0,
+          padding: 0,
+          boxSizing: "border-box",
+        }}
+      >
+        <Header />
+        <Introduction />
+        <Timeline />
+        <Portfolios />
+        <MyInterests />
+        <Footer />
+      </div>
+    </>
+  );
+};
 
 export default Home;
