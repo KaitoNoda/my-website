@@ -35,6 +35,7 @@ export default class CenterMode extends Component<CenterModeProps> {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <style>{cssstyle}</style>
         <h2 className="Header">Portfolios</h2>
         <Slider dots={true} ref={this.sliderRef} {...settings}>
           <div className="portfolio">
@@ -60,3 +61,43 @@ export default class CenterMode extends Component<CenterModeProps> {
     );
   }
 }
+
+const cssstyle = `
+.Header{
+  width:250px;
+  margin-bottom:50px;
+  margin-left:200px;
+  color:white;
+  border-bottom:solid 1px white;
+  font-size:30px;
+}
+.container {
+  background:#111111;
+  margin: 160px auto;
+  padding: 80px 40px 40px 40px;
+  width: 100%;
+  height:600px;
+}
+
+.portfolio {
+  height: 300px;
+}
+img {
+  color: #fff;
+  width: 70%;
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.center .slick-center img {
+  opacity: 1;
+  transform: scale(1.58);
+}
+.center img {
+  transition: all 0.9s ease;
+}
+`;
