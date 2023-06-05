@@ -88,7 +88,8 @@ const cssstyle = `
 .portfolio {
   height: 300px;
 }
-img {
+
+.portfolio img {
   color: #fff;
   width: 70%;
   max-width: 300px;
