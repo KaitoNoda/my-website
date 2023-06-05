@@ -100,4 +100,15 @@ img {
 .center img {
   transition: all 0.9s ease;
 }
+ .slick-dots li button::before {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.4;
+  margin-top:20px;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #fff;
+  opacity: 1;
+}
 `;
