@@ -11,6 +11,12 @@ export default class CenterMode extends Component<CenterModeProps> {
     this.sliderRef = React.createRef<Slider>();
   }
 
+  handleClick = (index: number) => {
+    if (this.sliderRef.current) {
+      this.sliderRef.current.slickGoTo(index);
+    }
+  };
+
   render() {
     const settings: Settings = {
       className: "center",
@@ -39,22 +45,22 @@ export default class CenterMode extends Component<CenterModeProps> {
         <h2 className="Header">Portfolios</h2>
         <Slider dots={true} ref={this.sliderRef} {...settings}>
           <div className="portfolio">
-            <img src="/image1.jpg" />
+            <img src="/image1.jpg" onClick={() => this.handleClick(0)} />
           </div>
           <div className="portfolio">
-            <img src="/image2.jpg" />
+            <img src="/image2.jpg" onClick={() => this.handleClick(1)} />
           </div>
           <div className="portfolio">
-            <img src="/image3.jpg" />
+            <img src="/image3.jpg" onClick={() => this.handleClick(2)} />
           </div>
           <div className="portfolio">
-            <img src="/image4.jpg" />
+            <img src="/image4.jpg" onClick={() => this.handleClick(3)} />
           </div>
           <div className="portfolio">
-            <img src="/image5.jpg" />
+            <img src="/image5.jpg" onClick={() => this.handleClick(4)} />
           </div>
           <div className="portfolio">
-            <img src="/image6.jpg" />
+            <img src="/image6.jpg" onClick={() => this.handleClick(5)} />
           </div>
         </Slider>
       </div>
