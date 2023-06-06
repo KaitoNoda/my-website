@@ -9,27 +9,47 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 const Footer = () => {
   return (
-    <Box>
+    <Box sx={{ bgcolor: "#111111", color: "white", p: 2 }}>
       <Container maxWidth="lg">
-        <Typography>Contact</Typography>
-        <Box>
-          <Box>
-            <IconButton>
+        <Typography
+          sx={{
+            width: "300px",
+            margin: "0 auto",
+            textAlign: "center",
+            color: "#fff",
+            borderBottom: "solid 1px #fff",
+            fontSize: "32px",
+            fontWeight: "bold",
+            marginBottom: "64px",
+          }}
+        >
+          Contact
+        </Typography>
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          margin="0 auto"
+          width="280px"
+          gap={2}
+        >
+          <Box display="flex" gap={1}>
+            <IconButton color="inherit">
               <HomeIcon />
             </IconButton>
-            <Typography>Vancouver, Canada</Typography>
+            <Typography variant="h5">Vancouver, Canada</Typography>
           </Box>
-          <Box>
-            <IconButton>
+          <Box display="flex" gap={1}>
+            <IconButton color="inherit">
               <EmailIcon />
             </IconButton>
-            <Typography>Info@gmail.com</Typography>
+            <Typography variant="h5">KaitoNoda@outlook.com</Typography>
           </Box>
-          <Box>
-            <IconButton>
+          <Box display="flex" gap={1}>
+            <IconButton color="inherit">
               <PhoneIcon />
             </IconButton>
-            <Typography>2399348959</Typography>
+            <Typography variant="h5">+1(236)-516-9943</Typography>
           </Box>
         </Box>
       </Container>
