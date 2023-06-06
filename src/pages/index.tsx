@@ -4,9 +4,8 @@ import Footer from "components/Footer";
 import Introduction from "components/Introduction";
 import Portfolios from "components/Portfolios";
 import Timeline from "components/Timeline";
-import Skills from "@/components/MyInterests";
-import { CssBaseline } from "@mui/material";
 import MyInterests from "@/components/MyInterests";
+import { CssBaseline } from "@mui/material";
 
 const Home: React.FC = () => {
   return (
