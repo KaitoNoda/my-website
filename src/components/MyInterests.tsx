@@ -63,8 +63,36 @@ const MyInterests: React.FC = () => {
     <Box sx={{ width: "40%", margin: "200px auto" }}>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item, index) => (
-          <ImageListItem key={index}>
+          <ImageListItem
+            key={index}
+            sx={{
+              position: "relative",
+              "&:hover img": {
+                opacity: 0.5,
+              },
+              "&:hover div": {
+                opacity: 1,
+              },
+            }}
+          >
             <img src={item.img} alt={item.title} loading="lazy" />
+            <Box
+              sx={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                opacity: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                color: "white",
+                paddingLeft: 1,
+                width: "100%",
+                transition: "opacity 0.3s ease",
+              }}
+            >
+              <h3>Title: {item.title}</h3>
+              <p>Date: {item.date}</p>
+              <p>Place: {item.place}</p>
+            </Box>
           </ImageListItem>
         ))}
       </ImageList>
