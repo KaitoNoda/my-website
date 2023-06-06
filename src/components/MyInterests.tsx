@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   ImageList,
   ImageListItem,
@@ -59,6 +60,18 @@ const itemData = [
 ];
 
 const MyInterests: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [currentItem, setCurrentItem] = useState(itemData[0]);
+
+  const handleClickOpen = (item: (typeof itemData)[0]) => {
+    setCurrentItem(item);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Box sx={{ width: "40%", margin: "200px auto" }}>
       <Typography
@@ -88,6 +101,7 @@ const MyInterests: React.FC = () => {
                 opacity: 1,
               },
             }}
+            onClick={() => handleClickOpen(item)}
           >
             <img src={item.img} alt={item.title} loading="lazy" />
             <Box
@@ -110,6 +124,30 @@ const MyInterests: React.FC = () => {
           </ImageListItem>
         ))}
       </ImageList>
+
+      <Dialog open={open} onClose={handleClose}>
+        <DialogContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={currentItem.img}
+            style={{
+              maxWidth: "100%",
+              maxHeight: "70vh",
+              objectFit: "contain",
+            }}
+          />
+          <Typography variant="h5" mt={2}>
+            Title: {currentItem.title}
+          </Typography>
+          <Typography variant="body1">Date: {currentItem.date}</Typography>
+          <Typography variant="body1">Place: {currentItem.place}</Typography>
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 };
