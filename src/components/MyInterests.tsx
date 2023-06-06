@@ -15,7 +15,7 @@ const itemData = [
     place: "Anglemont, Canada",
   },
   {
-    img: "Shampagne.jpg",
+    img: "Champagne.jpg",
     title: "Rose Champagne Bay",
     date: "Aug 3, 2022",
     place: "Vernon, Canada",
@@ -61,6 +61,20 @@ const itemData = [
 const MyInterests: React.FC = () => {
   return (
     <Box sx={{ width: "40%", margin: "200px auto" }}>
+      <Typography
+        sx={{
+          width: "40%",
+          margin: "0 auto",
+          textAlign: "center",
+          color: "#111111",
+          borderBottom: "solid 1px #111111",
+          fontSize: "32px",
+          fontWeight: "bold",
+          marginBottom: "64px",
+        }}
+      >
+        Pictures
+      </Typography>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item, index) => (
           <ImageListItem
