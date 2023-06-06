@@ -13,6 +13,20 @@ import Box from "@mui/material/Box";
 export default function OppositeContentTimeline() {
   return (
     <Timeline position="alternate">
+      <Typography
+        sx={{
+          width: "320px",
+          margin: "0 auto",
+          textAlign: "center",
+          color: "#111111",
+          borderBottom: "solid 1px #111111",
+          fontSize: "32px",
+          fontWeight: "bold",
+          marginBottom: "64px",
+        }}
+      >
+        Timeline
+      </Typography>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           1999
