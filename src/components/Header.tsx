@@ -39,7 +39,7 @@ const IconButton = styled("a")({
   },
 });
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   return (
     <Box
       sx={{
