@@ -43,21 +43,19 @@ const IconButton = styled("a")({
 export const Header: React.FC = () => {
   return (
     <Box
+      p={"30px"}
+      boxSizing={"border-box"}
       sx={{
         backgroundColor: COLOR_CODES.BG,
-        padding: "30px",
-        boxSizing: "border-box",
       }}
     >
       <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "70%",
-          borderBottom: "1px solid #111111",
-          margin: "0 auto",
-        }}
+        display={"flex"}
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        width={"70%"}
+        borderBottom={"1px solid #111111"}
+        m={"0 auto"}
       >
         <Box sx={{ display: "flex" }}>
           <HeaderButton href="#aboutMe">About Me</HeaderButton>
@@ -66,7 +64,7 @@ export const Header: React.FC = () => {
           <HeaderButton href="#skills">Skills</HeaderButton>
           <HeaderButton href="#contact">Contact</HeaderButton>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box display={"flex"}>
           <IconButton
             href={EXTERNAL_LINKS.GITHUB}
             target="_blank"
