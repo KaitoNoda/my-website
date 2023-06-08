@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-export default function OppositeContentTimeline() {
+export const TimeLine: React.FC = () => {
   return (
     <Timeline position="alternate">
       <Typography
@@ -143,4 +143,4 @@ export default function OppositeContentTimeline() {
       </TimelineItem>
     </Timeline>
   );
-}
+};
