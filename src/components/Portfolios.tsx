@@ -1,72 +1,17 @@
-import React, { Component, RefObject } from "react";
+import React, { useRef } from "react";
 import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-interface CenterModeProps {}
-
-export default class CenterMode extends Component<CenterModeProps> {
-  sliderRef: RefObject<Slider>;
-
-  constructor(props: CenterModeProps) {
-    super(props);
-    this.sliderRef = React.createRef<Slider>();
-  }
-
-  handleClick = (index: number) => {
-    if (this.sliderRef.current) {
-      this.sliderRef.current.slickGoTo(index);
-    }
-  };
-
-  render() {
-    const settings: Settings = {
-      className: "center",
-      arrows: false,
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500,
-    };
-
-    return (
-      <div className="container">
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charSet="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-        <style>{cssstyle}</style>
-        <h2 className="Header">Portfolios</h2>
-        <Slider dots={true} ref={this.sliderRef} {...settings}>
-          <div className="portfolio">
-            <img src="/image1.jpg" onClick={() => this.handleClick(0)} />
-          </div>
-          <div className="portfolio">
-            <img src="/image2.jpg" onClick={() => this.handleClick(1)} />
-          </div>
-          <div className="portfolio">
-            <img src="/image3.jpg" onClick={() => this.handleClick(2)} />
-          </div>
-          <div className="portfolio">
-            <img src="/image4.jpg" onClick={() => this.handleClick(3)} />
-          </div>
-          <div className="portfolio">
-            <img src="/image5.jpg" onClick={() => this.handleClick(4)} />
-          </div>
-          <div className="portfolio">
-            <img src="/image6.jpg" onClick={() => this.handleClick(5)} />
-          </div>
-        </Slider>
-      </div>
-    );
-  }
-}
+const settings: Settings = {
+  className: "center",
+  arrows: false,
+  centerMode: true,
+  infinite: true,
+  centerPadding: "60px",
+  slidesToShow: 3,
+  speed: 500,
+};
 
 const cssstyle = `
 .Header{
@@ -119,3 +64,40 @@ const cssstyle = `
   opacity: 1;
 }
 `;
+
+export const Portfolios: React.FC = () => {
+  const sliderRef = useRef<Slider>(null);
+
+  const handleClick = (index: number) => {
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(index);
+    }
+  };
+
+  return (
+    <div className="container">
+      <style>{cssstyle}</style>
+      <h2 className="Header">Portfolios</h2>
+      <Slider dots={true} ref={sliderRef} {...settings}>
+        <div className="portfolio">
+          <img src="/image1.jpg" onClick={() => handleClick(0)} />
+        </div>
+        <div className="portfolio">
+          <img src="/image2.jpg" onClick={() => handleClick(1)} />
+        </div>
+        <div className="portfolio">
+          <img src="/image3.jpg" onClick={() => handleClick(2)} />
+        </div>
+        <div className="portfolio">
+          <img src="/image4.jpg" onClick={() => handleClick(3)} />
+        </div>
+        <div className="portfolio">
+          <img src="/image5.jpg" onClick={() => handleClick(4)} />
+        </div>
+        <div className="portfolio">
+          <img src="/image6.jpg" onClick={() => handleClick(5)} />
+        </div>
+      </Slider>
+    </div>
+  );
+};
