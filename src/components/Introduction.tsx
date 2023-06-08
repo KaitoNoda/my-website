@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-const Introduction: React.FC = () => {
+export const Introduction: React.FC = () => {
   return (
     <Paper
       elevation={4}
@@ -43,5 +43,3 @@ const Introduction: React.FC = () => {
     </Paper>
   );
 };
-
-export default Introduction;
