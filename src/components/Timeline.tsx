@@ -9,21 +9,20 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { COLOR_CODES } from "constants/color-codes";
 
 export const TimeLine: React.FC = () => {
   return (
     <Timeline position="alternate">
       <Typography
-        sx={{
-          width: "320px",
-          margin: "0 auto",
-          textAlign: "center",
-          color: "#111111",
-          borderBottom: "solid 1px #111111",
-          fontSize: "32px",
-          fontWeight: "bold",
-          marginBottom: "64px",
-        }}
+        width={"320px"}
+        m={"0 auto"}
+        textAlign={"center"}
+        color={COLOR_CODES.BLACK}
+        borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
+        fontSize={"32px"}
+        fontWeight={"bold"}
+        marginBottom={"64px"}
       >
         Timeline
       </Typography>
