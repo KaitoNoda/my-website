@@ -8,52 +8,85 @@ import {
   Typography,
 } from "@mui/material";
 import { COLOR_CODES } from "@/constants/color-codes";
+import Image from "next/image";
 
 const itemData = [
   {
-    img: "sunset.jpg",
+    img: {
+      src: "/sunset.jpg",
+      width: 600,
+      height: 522,
+    },
     title: "Sunset View",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
-    img: "Champagne.jpg",
+    img: {
+      src: "/Champagne.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Rose Champagne Bay",
     date: "Aug 3, 2022",
     place: "Vernon, Canada",
   },
   {
-    img: "hanabi.jpg",
+    img: {
+      src: "/hanabi.jpg",
+      width: 600,
+      height: 414,
+    },
     title: "Hanabi",
     date: "Aug 29, 2020",
     place: "Nagano, Japan",
   },
   {
-    img: "art.jpg",
+    img: {
+      src: "/art.jpg",
+      width: 600,
+      height: 450,
+    },
     title: "No Titile",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
-    img: "breakfast.jpg",
+    img: {
+      src: "/breakfast.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Luxury Breakfast",
     date: "Aug 3, 2022",
     place: "Kelowna, Canada",
   },
   {
-    img: "forest.jpg",
+    img: {
+      src: "/forest.jpg",
+      width: 600,
+      height: 804,
+    },
     title: "Cave",
     date: "Sep 21, 2021",
     place: "Aichi, Japan",
   },
   {
-    img: "winery.jpg",
+    img: {
+      src: "/winery.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Winery in Kelowna",
     date: "Aug 3, 2022",
     place: "Kelowna, Canada",
   },
   {
-    img: "acai.jpg",
+    img: {
+      src: "/acai.jpg",
+      width: 600,
+      height: 768,
+    },
     title: "Honolulu Beach",
     date: "June 19, 2022",
     place: "Hawaii, USA",
@@ -102,7 +135,15 @@ export const MyInterests: React.FC = () => {
             }}
             onClick={() => handleClickOpen(item)}
           >
-            <img src={item.img} alt={item.title} loading="lazy" />
+            <Image
+              src={item.img.src}
+              alt={item.title}
+              height={item.img.height}
+              width={item.img.width}
+              loading="lazy"
+              layout="responsive"
+            />
+
             <Box
               position={"absolute"}
               bottom={0}
@@ -116,9 +157,11 @@ export const MyInterests: React.FC = () => {
                 transition: "opacity 0.3s ease",
               }}
             >
-              <h3>Title: {item.title}</h3>
-              <p>Date: {item.date}</p>
-              <p>Place: {item.place}</p>
+              <Typography variant="h6">Title: {item.title}</Typography>
+              <Typography variant="body1">Date: {item.date}</Typography>
+              <Typography variant="body1" mb="10px">
+                Place: {item.place}
+              </Typography>
             </Box>
           </ImageListItem>
         ))}
@@ -132,8 +175,11 @@ export const MyInterests: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <img
-            src={currentItem.img}
+          <Image
+            src={currentItem.img.src}
+            height={currentItem.img.height}
+            width={currentItem.img.width}
+            alt={currentItem.title}
             style={{
               maxWidth: "100%",
               maxHeight: "70vh",
