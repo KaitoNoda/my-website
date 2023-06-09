@@ -1,7 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Box from "@mui/system/Box";
+import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import { COLOR_CODES } from "constants/color-codes";
+import { EXTERNAL_PATHS } from "constants/external-paths";
 
 const settings: Settings = {
   className: "center",
@@ -13,57 +18,14 @@ const settings: Settings = {
   speed: 500,
 };
 
-const cssstyle = `
-.Header{
-  width:250px;
-  margin-bottom:50px;
-  margin-left:200px;
-  color:white;
-  border-bottom:solid 1px white;
-  font-size:30px;
-}
-.container {
-  background:#111111;
-  margin: 160px auto;
-  padding: 80px 40px 40px 40px;
-  width: 100%;
-  height:600px;
-}
-
-.portfolio {
-  height: 300px;
-}
-
-.portfolio img {
-  color: #fff;
-  width: 70%;
-  max-width: 300px;
-  margin: 50px auto;
-  padding: 2%;
-  position: relative;
-  text-align: center;
-  opacity: 0.5;
-}
-
-.center .slick-center img {
-  opacity: 1;
-  transform: scale(1.58);
-}
-.center img {
-  transition: all 0.9s ease;
-}
- .slick-dots li button::before {
-  font-size: 13px;
-  color: #fff;
-  opacity: 0.4;
-  margin-top:20px;
-}
-
-.slick-dots li.slick-active button::before {
-  color: #fff;
-  opacity: 1;
-}
-`;
+const imgStyles: React.CSSProperties = {
+  color: COLOR_CODES.WHITE,
+  maxWidth: "300px",
+  margin: "60px auto",
+  padding: "2%",
+  textAlign: "center",
+  opacity: 0.4,
+};
 
 export const Portfolios: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
@@ -75,29 +37,109 @@ export const Portfolios: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <Box
+      margin={" 160px auto"}
+      padding={"80px 40px 40px 40px"}
+      width={"100%"}
+      height={"600px"}
+      sx={{
+        backgroundColor: COLOR_CODES.BLACK,
+      }}
+    >
       <style>{cssstyle}</style>
-      <h2 className="Header">Portfolios</h2>
-      <Slider dots={true} ref={sliderRef} {...settings}>
-        <div className="portfolio">
-          <img src="/image1.jpg" onClick={() => handleClick(0)} />
-        </div>
-        <div className="portfolio">
-          <img src="/image2.jpg" onClick={() => handleClick(1)} />
-        </div>
-        <div className="portfolio">
-          <img src="/image3.jpg" onClick={() => handleClick(2)} />
-        </div>
-        <div className="portfolio">
-          <img src="/image4.jpg" onClick={() => handleClick(3)} />
-        </div>
-        <div className="portfolio">
-          <img src="/image5.jpg" onClick={() => handleClick(4)} />
-        </div>
-        <div className="portfolio">
-          <img src="/image6.jpg" onClick={() => handleClick(5)} />
-        </div>
+      <Typography
+        width={"250px"}
+        marginBottom={"50px"}
+        marginLeft={"200px"}
+        color={"white"}
+        borderBottom={"solid 1px white"}
+        fontSize={"30px"}
+      >
+        Portfolios
+      </Typography>
+      <Slider dots ref={sliderRef} {...settings}>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG1}
+            alt="Image 1"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(0)}
+          />
+        </Box>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG2}
+            alt="Image 2"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(1)}
+          />
+        </Box>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG3}
+            alt="Image 3"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(2)}
+          />
+        </Box>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG4}
+            alt="Image 4"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(3)}
+          />
+        </Box>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG5}
+            alt="Image 5"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(4)}
+          />
+        </Box>
+        <Box height={"300px"}>
+          <Image
+            src={EXTERNAL_PATHS.IMG6}
+            alt="Image 6"
+            width={290}
+            height={180}
+            style={imgStyles}
+            onClick={() => handleClick(5)}
+          />
+        </Box>
       </Slider>
-    </div>
+    </Box>
   );
 };
+
+const cssstyle = `
+.center .slick-center img {
+  opacity: 1 !important;
+  transform: scale(1.58);
+}
+.center img {
+  transition: all 0.8s ease;
+}
+ .slick-dots li button::before {
+  font-size: 13px;
+  color:${COLOR_CODES.WHITE};
+  opacity: 0.4;
+  margin-top:20px;
+}
+
+.slick-dots li.slick-active button::before {
+  color: ${COLOR_CODES.WHITE};
+  opacity: 1 ;
+}
+`;
