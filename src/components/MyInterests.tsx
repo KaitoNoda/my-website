@@ -7,6 +7,7 @@ import {
   DialogContent,
   Typography,
 } from "@mui/material";
+import { COLOR_CODES } from "@/constants/color-codes";
 
 const itemData = [
   {
@@ -59,7 +60,7 @@ const itemData = [
   },
 ];
 
-const MyInterests: React.FC = () => {
+export const MyInterests: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState(itemData[0]);
 
@@ -73,18 +74,16 @@ const MyInterests: React.FC = () => {
   };
 
   return (
-    <Box sx={{ width: "40%", margin: "200px auto" }}>
+    <Box width={"40%"} margin={"200px auto"}>
       <Typography
-        sx={{
-          width: "40%",
-          margin: "0 auto",
-          textAlign: "center",
-          color: "#111111",
-          borderBottom: "solid 1px #111111",
-          fontSize: "32px",
-          fontWeight: "bold",
-          marginBottom: "64px",
-        }}
+        width={"40%"}
+        margin={"0 auto"}
+        textAlign={"center"}
+        color={COLOR_CODES.BLACK}
+        borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
+        fontSize={"32px"}
+        fontWeight={"bold"}
+        mb={"64px"}
       >
         Pictures
       </Typography>
@@ -105,15 +104,15 @@ const MyInterests: React.FC = () => {
           >
             <img src={item.img} alt={item.title} loading="lazy" />
             <Box
+              position={"absolute"}
+              bottom={0}
+              left={0}
+              color={COLOR_CODES.WHITE}
+              pl={1}
+              width={"100%"}
               sx={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
                 opacity: 0,
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                color: "white",
-                paddingLeft: 1,
-                width: "100%",
+                backgroundColor: COLOR_CODES.DARKGRAY,
                 transition: "opacity 0.3s ease",
               }}
             >
@@ -151,5 +150,3 @@ const MyInterests: React.FC = () => {
     </Box>
   );
 };
-
-export default MyInterests;
