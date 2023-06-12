@@ -94,7 +94,7 @@ const itemData = [
 ];
 
 export const MyInterests: React.FC = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState(itemData[0]);
 
   const handleClickOpen = (item: (typeof itemData)[0]) => {
@@ -167,7 +167,7 @@ export const MyInterests: React.FC = () => {
         ))}
       </ImageList>
 
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={isOpen} onClose={handleClose}>
         <DialogContent
           sx={{
             display: "flex",
