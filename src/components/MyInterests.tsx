@@ -123,7 +123,7 @@ export const MyInterests: React.FC = () => {
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item, index) => (
           <ImageListItem
-            key={index}
+            key={item.title}
             sx={{
               position: "relative",
               "&:hover img": {
