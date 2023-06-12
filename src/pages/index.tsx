@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "components/Header";
+import { Header } from "components/Header";
 import Footer from "components/Footer";
-import Introduction from "components/Introduction";
-import Portfolios from "components/Portfolios";
-import Timeline from "components/Timeline";
-import Skills from "@/components/MyInterests";
+import { Introduction } from "components/Introduction";
+import { Portfolios } from "components/Portfolios";
+import { TimeLine } from "components/Timeline";
+import { MyInterests } from "components/MyInterests";
 import { CssBaseline } from "@mui/material";
-import MyInterests from "@/components/MyInterests";
 
 const Home: React.FC = () => {
   return (
@@ -22,7 +21,7 @@ const Home: React.FC = () => {
       >
         <Header />
         <Introduction />
-        <Timeline />
+        <TimeLine />
         <Portfolios />
         <MyInterests />
         <Footer />

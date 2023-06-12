@@ -7,60 +7,94 @@ import {
   DialogContent,
   Typography,
 } from "@mui/material";
+import { COLOR_CODES } from "@/constants/color-codes";
+import Image from "next/image";
 
 const itemData = [
   {
-    img: "sunset.jpg",
+    img: {
+      src: "/sunset.jpg",
+      width: 600,
+      height: 522,
+    },
     title: "Sunset View",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
-    img: "Champagne.jpg",
+    img: {
+      src: "/Champagne.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Rose Champagne Bay",
     date: "Aug 3, 2022",
     place: "Vernon, Canada",
   },
   {
-    img: "hanabi.jpg",
+    img: {
+      src: "/hanabi.jpg",
+      width: 600,
+      height: 414,
+    },
     title: "Hanabi",
     date: "Aug 29, 2020",
     place: "Nagano, Japan",
   },
   {
-    img: "art.jpg",
+    img: {
+      src: "/art.jpg",
+      width: 600,
+      height: 450,
+    },
     title: "No Titile",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
-    img: "breakfast.jpg",
+    img: {
+      src: "/breakfast.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Luxury Breakfast",
     date: "Aug 3, 2022",
     place: "Kelowna, Canada",
   },
   {
-    img: "forest.jpg",
+    img: {
+      src: "/forest.jpg",
+      width: 600,
+      height: 804,
+    },
     title: "Cave",
     date: "Sep 21, 2021",
     place: "Aichi, Japan",
   },
   {
-    img: "winery.jpg",
+    img: {
+      src: "/winery.jpg",
+      width: 600,
+      height: 798,
+    },
     title: "Winery in Kelowna",
     date: "Aug 3, 2022",
     place: "Kelowna, Canada",
   },
   {
-    img: "acai.jpg",
+    img: {
+      src: "/acai.jpg",
+      width: 600,
+      height: 768,
+    },
     title: "Honolulu Beach",
     date: "June 19, 2022",
     place: "Hawaii, USA",
   },
 ];
 
-const MyInterests: React.FC = () => {
-  const [open, setOpen] = useState(false);
+export const MyInterests: React.FC = () => {
+  const [isOpen, setOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState(itemData[0]);
 
   const handleClickOpen = (item: (typeof itemData)[0]) => {
@@ -73,18 +107,16 @@ const MyInterests: React.FC = () => {
   };
 
   return (
-    <Box sx={{ width: "40%", margin: "200px auto" }}>
+    <Box width={"40%"} margin={"200px auto"}>
       <Typography
-        sx={{
-          width: "40%",
-          margin: "0 auto",
-          textAlign: "center",
-          color: "#111111",
-          borderBottom: "solid 1px #111111",
-          fontSize: "32px",
-          fontWeight: "bold",
-          marginBottom: "64px",
-        }}
+        width={"40%"}
+        margin={"0 auto"}
+        textAlign={"center"}
+        color={COLOR_CODES.BLACK}
+        borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
+        fontSize={"32px"}
+        fontWeight={"bold"}
+        mb={"64px"}
       >
         Pictures
       </Typography>
@@ -103,29 +135,39 @@ const MyInterests: React.FC = () => {
             }}
             onClick={() => handleClickOpen(item)}
           >
-            <img src={item.img} alt={item.title} loading="lazy" />
+            <Image
+              src={item.img.src}
+              alt={item.title}
+              height={item.img.height}
+              width={item.img.width}
+              loading="lazy"
+              layout="responsive"
+            />
+
             <Box
+              position={"absolute"}
+              bottom={0}
+              left={0}
+              color={COLOR_CODES.WHITE}
+              pl={1}
+              width={"100%"}
               sx={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
                 opacity: 0,
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                color: "white",
-                paddingLeft: 1,
-                width: "100%",
+                backgroundColor: COLOR_CODES.DARKGRAY,
                 transition: "opacity 0.3s ease",
               }}
             >
-              <h3>Title: {item.title}</h3>
-              <p>Date: {item.date}</p>
-              <p>Place: {item.place}</p>
+              <Typography variant="h6">Title: {item.title}</Typography>
+              <Typography variant="body1">Date: {item.date}</Typography>
+              <Typography variant="body1" mb="10px">
+                Place: {item.place}
+              </Typography>
             </Box>
           </ImageListItem>
         ))}
       </ImageList>
 
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={isOpen} onClose={handleClose}>
         <DialogContent
           sx={{
             display: "flex",
@@ -133,8 +175,11 @@ const MyInterests: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <img
-            src={currentItem.img}
+          <Image
+            src={currentItem.img.src}
+            height={currentItem.img.height}
+            width={currentItem.img.width}
+            alt={currentItem.title}
             style={{
               maxWidth: "100%",
               maxHeight: "70vh",
@@ -151,5 +196,3 @@ const MyInterests: React.FC = () => {
     </Box>
   );
 };
-
-export default MyInterests;

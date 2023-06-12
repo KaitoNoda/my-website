@@ -9,10 +9,23 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { COLOR_CODES } from "constants/color-codes";
 
-export default function OppositeContentTimeline() {
+export const TimeLine: React.FC = () => {
   return (
     <Timeline position="alternate">
+      <Typography
+        width={"320px"}
+        m={"0 auto"}
+        textAlign={"center"}
+        color={COLOR_CODES.BLACK}
+        borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
+        fontSize={"32px"}
+        fontWeight={"bold"}
+        marginBottom={"64px"}
+      >
+        Timeline
+      </Typography>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           1999
@@ -129,4 +142,4 @@ export default function OppositeContentTimeline() {
       </TimelineItem>
     </Timeline>
   );
-}
+};
