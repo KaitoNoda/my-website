@@ -6,26 +6,21 @@ import { Portfolios } from "components/Portfolios";
 import { TimeLine } from "components/Timeline";
 import { MyInterests } from "components/MyInterests";
 import { CssBaseline } from "@mui/material";
+import Box from "@mui/system/Box";
+import { COLOR_CODES } from "constants/color-codes";
 
 const Home: React.FC = () => {
   return (
     <>
       <CssBaseline />
-      <div
-        style={{
-          backgroundColor: "#e3dddd",
-          margin: 0,
-          padding: 0,
-          boxSizing: "border-box",
-        }}
-      >
+      <Box bgcolor={COLOR_CODES.BG} m={0} p={0} boxSizing={"border-box"}>
         <Header />
         <Introduction />
         <TimeLine />
         <Portfolios />
         <MyInterests />
         <Footer />
-      </div>
+      </Box>
     </>
   );
 };
