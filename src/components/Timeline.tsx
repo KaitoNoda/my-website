@@ -39,7 +39,7 @@ export const TimeLine: React.FC = () => {
             elevation={4}
             sx={{
               backgroundColor: COLOR_CODES.BG,
-              padding: "10px",
+              padding: 1,
               width: "400px",
             }}
           >
@@ -63,7 +63,7 @@ export const TimeLine: React.FC = () => {
               elevation={4}
               sx={{
                 backgroundColor: COLOR_CODES.BG,
-                padding: "10px",
+                padding: 1,
                 width: "400px",
               }}
             >
@@ -89,7 +89,7 @@ export const TimeLine: React.FC = () => {
             elevation={4}
             sx={{
               backgroundColor: COLOR_CODES.BG,
-              padding: "10px",
+              padding: 1,
               width: "400px",
             }}
           >
@@ -115,7 +115,7 @@ export const TimeLine: React.FC = () => {
               elevation={4}
               sx={{
                 backgroundColor: COLOR_CODES.BG,
-                padding: "10px",
+                padding: 1,
                 width: "400px",
               }}
             >
@@ -140,7 +140,7 @@ export const TimeLine: React.FC = () => {
             elevation={4}
             sx={{
               backgroundColor: COLOR_CODES.BG,
-              padding: "10px",
+              padding: 2,
               width: "400px",
             }}
           >

@@ -22,7 +22,7 @@ const imgStyles: React.CSSProperties = {
   color: COLOR_CODES.WHITE,
   maxWidth: "300px",
   margin: "60px auto",
-  padding: "2%",
+  padding: 2,
   textAlign: "center",
   opacity: 0.4,
 };

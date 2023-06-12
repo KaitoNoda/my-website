@@ -116,7 +116,7 @@ export const MyInterests: React.FC = () => {
         borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
         fontSize={"32px"}
         fontWeight={"bold"}
-        mb={"64px"}
+        mb={8}
       >
         Pictures
       </Typography>
@@ -159,7 +159,7 @@ export const MyInterests: React.FC = () => {
             >
               <Typography variant="h6">Title: {item.title}</Typography>
               <Typography variant="body1">Date: {item.date}</Typography>
-              <Typography variant="body1" mb="10px">
+              <Typography variant="body1" mb={1}>
                 Place: {item.place}
               </Typography>
             </Box>

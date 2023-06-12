@@ -13,7 +13,7 @@ export const Introduction: React.FC = () => {
       sx={{
         display: "flex",
         backgroundColor: COLOR_CODES.BG,
-        pl: "10px",
+        pl: 2,
         width: "1000px",
         height: "350px",
         margin: "150px auto",

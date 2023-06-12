@@ -20,7 +20,7 @@ export const Footer = () => {
           borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
           fontSize={"32px"}
           fontWeight={"bold"}
-          mb={"64px"}
+          mb={8}
         >
           Contact
         </Typography>
