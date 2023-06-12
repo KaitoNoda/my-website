@@ -42,13 +42,7 @@ const IconButton = styled("a")({
 
 export const Header: React.FC = () => {
   return (
-    <Box
-      p={"30px"}
-      boxSizing={"border-box"}
-      sx={{
-        backgroundColor: COLOR_CODES.BG,
-      }}
-    >
+    <Box p={"30px"} boxSizing={"border-box"} bgcolor={COLOR_CODES.BG}>
       <Box
         display={"flex"}
         justifyContent={"space-between"}

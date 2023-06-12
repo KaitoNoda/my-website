@@ -42,17 +42,15 @@ export const Portfolios: React.FC = () => {
       padding={"80px 40px 40px 40px"}
       width={"100%"}
       height={"600px"}
-      sx={{
-        backgroundColor: COLOR_CODES.BLACK,
-      }}
+      bgcolor={COLOR_CODES.BLACK}
     >
       <style>{cssstyle}</style>
       <Typography
         width={"250px"}
         marginBottom={"50px"}
         marginLeft={"200px"}
-        color={"white"}
-        borderBottom={"solid 1px white"}
+        color={COLOR_CODES.WHITE}
+        borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
         fontSize={"30px"}
       >
         Portfolios

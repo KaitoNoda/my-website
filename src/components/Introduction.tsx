@@ -4,6 +4,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { EXTERNAL_PATHS } from "constants/external-paths";
+import { COLOR_CODES } from "constants/color-codes";
 
 export const Introduction: React.FC = () => {
   return (
@@ -11,12 +12,12 @@ export const Introduction: React.FC = () => {
       elevation={4}
       sx={{
         display: "flex",
-        backgroundColor: "#e3dddd",
+        backgroundColor: COLOR_CODES.BG,
         pl: "10px",
         width: "1000px",
         height: "350px",
         margin: "150px auto",
-        color: "black",
+        color: COLOR_CODES.BLACK,
       }}
     >
       <Box flex={"0.7"} mt={"10px"} ml={"20px"}>

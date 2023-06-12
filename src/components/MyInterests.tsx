@@ -151,9 +151,9 @@ export const MyInterests: React.FC = () => {
               color={COLOR_CODES.WHITE}
               pl={1}
               width={"100%"}
+              bgcolor={COLOR_CODES.DARKGRAY}
               sx={{
                 opacity: 0,
-                backgroundColor: COLOR_CODES.DARKGRAY,
                 transition: "opacity 0.3s ease",
               }}
             >

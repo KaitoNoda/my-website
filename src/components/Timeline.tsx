@@ -37,7 +37,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: "10px",
+              width: "400px",
+            }}
           >
             <Typography>
               I was born in the culturally rich city of Nagoya, Japan
@@ -58,7 +62,7 @@ export const TimeLine: React.FC = () => {
             <Paper
               elevation={4}
               sx={{
-                backgroundColor: "#e3dddd",
+                backgroundColor: COLOR_CODES.BG,
                 padding: "10px",
                 width: "400px",
               }}
@@ -83,7 +87,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: "10px",
+              width: "400px",
+            }}
           >
             <Typography>
               A milestone year for me as I successfully graduated from high
@@ -106,7 +114,7 @@ export const TimeLine: React.FC = () => {
             <Paper
               elevation={4}
               sx={{
-                backgroundColor: "#e3dddd",
+                backgroundColor: COLOR_CODES.BG,
                 padding: "10px",
                 width: "400px",
               }}
@@ -130,7 +138,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: "10px",
+              width: "400px",
+            }}
           >
             <Typography>
               As a significant step towards my academic and career goals, I
