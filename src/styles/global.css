@@ -1,3 +1,22 @@
 html {
   scroll-behavior: smooth;
 }
+.center .slick-center img {
+  opacity: 1 !important;
+  transform: scale(1.58);
+}
+
+.center img {
+  transition: all 0.8s ease;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ffff !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li button::before {
+  font-size: 16px !important;
+  color: #fff !important;
+  margin-top: 30px;
+}

@@ -38,6 +38,7 @@ export const Portfolios: React.FC = () => {
 
   return (
     <Box
+      className={"Hello"}
       id={"portfolios"}
       margin={" 160px auto"}
       padding={"80px 40px 40px 40px"}
@@ -45,7 +46,6 @@ export const Portfolios: React.FC = () => {
       height={"600px"}
       bgcolor={COLOR_CODES.BLACK}
     >
-      <style>{cssstyle}</style>
       <Typography
         width={"250px"}
         marginBottom={"50px"}
@@ -121,24 +121,3 @@ export const Portfolios: React.FC = () => {
     </Box>
   );
 };
-
-const cssstyle = `
-.center .slick-center img {
-  opacity: 1 !important;
-  transform: scale(1.58);
-}
-.center img {
-  transition: all 0.8s ease;
-}
- .slick-dots li button::before {
-  font-size: 13px;
-  color:${COLOR_CODES.WHITE};
-  opacity: 0.4;
-  margin-top:20px;
-}
-
-.slick-dots li.slick-active button::before {
-  color: ${COLOR_CODES.WHITE};
-  opacity: 1 ;
-}
-`;
