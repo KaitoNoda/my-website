@@ -7,7 +7,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <Box sx={{ bgcolor: "#111111", color: "white", p: 2 }}>
       <Container maxWidth="lg">
@@ -56,5 +56,3 @@ const Footer = () => {
     </Box>
   );
 };
-
-export default Footer;

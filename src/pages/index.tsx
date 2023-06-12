@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "components/Header";
-import Footer from "components/Footer";
+import { Footer } from "components/Footer";
 import { Introduction } from "components/Introduction";
 import { Portfolios } from "components/Portfolios";
 import { TimeLine } from "components/Timeline";
