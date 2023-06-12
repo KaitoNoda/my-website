@@ -15,6 +15,7 @@ export const TimeLine: React.FC = () => {
   return (
     <Timeline position="alternate">
       <Typography
+        id={"timeline"}
         width={"320px"}
         m={"0 auto"}
         textAlign={"center"}
@@ -23,6 +24,8 @@ export const TimeLine: React.FC = () => {
         fontSize={"32px"}
         fontWeight={"bold"}
         marginBottom={"64px"}
+        pt={12}
+        mt={-12}
       >
         Timeline
       </Typography>

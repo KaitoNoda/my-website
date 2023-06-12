@@ -38,6 +38,7 @@ export const Portfolios: React.FC = () => {
 
   return (
     <Box
+      id={"portfolios"}
       margin={" 160px auto"}
       padding={"80px 40px 40px 40px"}
       width={"100%"}

@@ -107,7 +107,7 @@ export const MyInterests: React.FC = () => {
   };
 
   return (
-    <Box width={"40%"} margin={"200px auto"}>
+    <Box id={"pictures"} width={"40%"} margin={"200px auto"} pt={12} mt={-12}>
       <Typography
         width={"40%"}
         margin={"0 auto"}

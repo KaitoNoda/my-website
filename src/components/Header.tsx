@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
           <HeaderButton href="#aboutMe">About Me</HeaderButton>
           <HeaderButton href="#timeline">Timeline</HeaderButton>
           <HeaderButton href="#portfolios">Portfolios</HeaderButton>
-          <HeaderButton href="#skills">Skills</HeaderButton>
+          <HeaderButton href="#pictures">Pictures</HeaderButton>
           <HeaderButton href="#contact">Contact</HeaderButton>
         </Box>
         <Box display={"flex"}>

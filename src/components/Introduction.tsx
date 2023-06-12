@@ -20,7 +20,7 @@ export const Introduction: React.FC = () => {
         color: COLOR_CODES.BLACK,
       }}
     >
-      <Box flex={"0.7"} mt={"10px"} ml={"20px"}>
+      <Box id={"aboutMe"} flex={"0.7"} ml={"20px"} pt={12} mt={-12}>
         <Typography
           variant={"h1"}
           component={"h1"}
