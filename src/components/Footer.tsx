@@ -6,22 +6,21 @@ import IconButton from "@mui/material/IconButton";
 import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { COLOR_CODES } from "constants/color-codes";
 
 export const Footer = () => {
   return (
-    <Box sx={{ bgcolor: "#111111", color: "white", p: 2 }}>
+    <Box bgcolor={COLOR_CODES.BLACK} color={COLOR_CODES.WHITE} p={2}>
       <Container maxWidth="lg">
         <Typography
-          sx={{
-            width: "300px",
-            margin: "0 auto",
-            textAlign: "center",
-            color: "#fff",
-            borderBottom: "solid 1px #fff",
-            fontSize: "32px",
-            fontWeight: "bold",
-            marginBottom: "64px",
-          }}
+          width={"300px"}
+          m={"0 auto"}
+          textAlign={"center"}
+          color={COLOR_CODES.WHITE}
+          borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
+          fontSize={"32px"}
+          fontWeight={"bold"}
+          mb={"64px"}
         >
           Contact
         </Typography>
