@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -30,6 +30,15 @@ const imgStyles: React.CSSProperties = {
 export const Portfolios: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
 
+  const images = [
+    { src: EXTERNAL_PATHS.IMG1, index: 0 },
+    { src: EXTERNAL_PATHS.IMG2, index: 1 },
+    { src: EXTERNAL_PATHS.IMG3, index: 2 },
+    { src: EXTERNAL_PATHS.IMG4, index: 3 },
+    { src: EXTERNAL_PATHS.IMG5, index: 4 },
+    { src: EXTERNAL_PATHS.IMG6, index: 5 },
+  ];
+
   const handleClick = (index: number) => {
     if (sliderRef.current) {
       sliderRef.current.slickGoTo(index);
@@ -38,7 +47,6 @@ export const Portfolios: React.FC = () => {
 
   return (
     <Box
-      className={"Hello"}
       id={"portfolios"}
       margin={" 160px auto"}
       padding={"80px 40px 40px 40px"}
@@ -48,8 +56,8 @@ export const Portfolios: React.FC = () => {
     >
       <Typography
         width={"250px"}
-        marginBottom={"50px"}
-        marginLeft={"200px"}
+        mb={7}
+        ml={25}
         color={COLOR_CODES.WHITE}
         borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
         fontSize={"30px"}
@@ -57,66 +65,18 @@ export const Portfolios: React.FC = () => {
         Portfolios
       </Typography>
       <Slider dots ref={sliderRef} {...settings}>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG1}
-            alt="Image 1"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(0)}
-          />
-        </Box>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG2}
-            alt="Image 2"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(1)}
-          />
-        </Box>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG3}
-            alt="Image 3"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(2)}
-          />
-        </Box>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG4}
-            alt="Image 4"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(3)}
-          />
-        </Box>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG5}
-            alt="Image 5"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(4)}
-          />
-        </Box>
-        <Box height={"300px"}>
-          <Image
-            src={EXTERNAL_PATHS.IMG6}
-            alt="Image 6"
-            width={290}
-            height={180}
-            style={imgStyles}
-            onClick={() => handleClick(5)}
-          />
-        </Box>
+        {images.map((image) => (
+          <Box key={image.index} height={"300px"}>
+            <Image
+              src={image.src}
+              alt={`Image ${image.index + 1}`}
+              width={290}
+              height={180}
+              style={imgStyles}
+              onClick={() => handleClick(image.index)}
+            />
+          </Box>
+        ))}
       </Slider>
     </Box>
   );
