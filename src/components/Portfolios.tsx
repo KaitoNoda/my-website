@@ -66,14 +66,18 @@ export const Portfolios: React.FC = () => {
       </Typography>
       <Slider dots ref={sliderRef} {...settings}>
         {images.map((image) => (
-          <Box key={image.src} height={"300px"}>
+          <Box
+            key={image.src}
+            height={"300px"}
+            sx={{ outline: "none", "&:focus": { outline: "none" } }}
+            onClick={() => handleClick(image.index)}
+          >
             <Image
               src={image.src}
               alt={`Image ${image.index + 1}`}
               width={290}
               height={180}
               style={imgStyles}
-              onClick={() => handleClick(image.index)}
             />
           </Box>
         ))}
