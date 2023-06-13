@@ -122,10 +122,13 @@ export const MyInterests: React.FC = () => {
         Pictures
       </Typography>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item, index) => (
+        {itemData.map((item) => (
           <ImageListItem
             key={item.title}
             sx={{
+              width: "100%",
+              height: 0,
+              paddingBottom: `${(item.img.height / item.img.width) * 100}%`,
               position: "relative",
               "&:hover img": {
                 opacity: 0.5,
@@ -136,14 +139,22 @@ export const MyInterests: React.FC = () => {
             }}
             onClick={() => handleClickOpen(item)}
           >
-            <Image
-              src={item.img.src}
-              alt={item.title}
-              height={item.img.height}
-              width={item.img.width}
-              loading="lazy"
-              layout="responsive"
-            />
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Image
+                src={item.img.src}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
 
             <Box
               position={"absolute"}
@@ -158,7 +169,9 @@ export const MyInterests: React.FC = () => {
                 transition: "opacity 0.3s ease",
               }}
             >
-              <Typography variant="h6">Title: {item.title}</Typography>
+              <Typography component="h2" variant="h6">
+                Title: {item.title}
+              </Typography>
               <Typography variant="body1">Date: {item.date}</Typography>
               <Typography variant="body1" mb={1}>
                 Place: {item.place}
@@ -187,7 +200,7 @@ export const MyInterests: React.FC = () => {
               objectFit: "contain",
             }}
           />
-          <Typography variant="h5" mt={2}>
+          <Typography component="h2" variant="h5" mt={2}>
             Title: {currentItem.title}
           </Typography>
           <Typography variant="body1">Date: {currentItem.date}</Typography>

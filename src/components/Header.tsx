@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
         width={"70%"}
-        borderBottom={"1px solid #111111"}
+        borderBottom={`1px solid ${COLOR_CODES.BLACK}`}
         m={"0 auto"}
       >
         <Box sx={{ display: "flex" }}>
