@@ -4,7 +4,7 @@ import Footer from "components/Footer";
 import { Introduction } from "components/Introduction";
 import { Portfolios } from "components/Portfolios";
 import { TimeLine } from "components/Timeline";
-import MyInterests from "components/MyInterests";
+import { MyInterests } from "components/MyInterests";
 import { CssBaseline } from "@mui/material";
 
 const Home: React.FC = () => {

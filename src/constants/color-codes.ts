@@ -3,4 +3,5 @@ export const COLOR_CODES = {
   GRAY: "gray",
   BG: "#e3dddd",
   WHITE: "#fff",
+  DARKGRAY: "rgba(0, 0, 0, 0.5)",
 };
