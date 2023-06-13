@@ -4,7 +4,7 @@ import Box from "@mui/system/Box";
 import { styled } from "@mui/system";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { COLOR_CODES } from "constants/color-codes";
-import { EXTERNAL_LINKS } from "constants/external-links";
+import { SOCIAL_MEDIA_LINKS } from "@/constants/social-media-links";
 
 const HeaderButton = styled(Button)({
   color: COLOR_CODES.BLACK,
@@ -42,38 +42,32 @@ const IconButton = styled("a")({
 
 export const Header: React.FC = () => {
   return (
-    <Box
-      p={"30px"}
-      boxSizing={"border-box"}
-      sx={{
-        backgroundColor: COLOR_CODES.BG,
-      }}
-    >
+    <Box p={4} boxSizing={"border-box"} bgcolor={COLOR_CODES.BG}>
       <Box
         display={"flex"}
         justifyContent={"space-between"}
         alignItems={"center"}
         width={"70%"}
-        borderBottom={"1px solid #111111"}
+        borderBottom={`1px solid ${COLOR_CODES.BLACK}`}
         m={"0 auto"}
       >
         <Box sx={{ display: "flex" }}>
           <HeaderButton href="#aboutMe">About Me</HeaderButton>
           <HeaderButton href="#timeline">Timeline</HeaderButton>
           <HeaderButton href="#portfolios">Portfolios</HeaderButton>
-          <HeaderButton href="#skills">Skills</HeaderButton>
+          <HeaderButton href="#pictures">Pictures</HeaderButton>
           <HeaderButton href="#contact">Contact</HeaderButton>
         </Box>
         <Box display={"flex"}>
           <IconButton
-            href={EXTERNAL_LINKS.GITHUB}
+            href={SOCIAL_MEDIA_LINKS.GITHUB}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub size={40} />
           </IconButton>
           <IconButton
-            href={EXTERNAL_LINKS.LINKEDIN}
+            href={SOCIAL_MEDIA_LINKS.LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
           >

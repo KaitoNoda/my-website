@@ -15,6 +15,7 @@ export const TimeLine: React.FC = () => {
   return (
     <Timeline position="alternate">
       <Typography
+        id={"timeline"}
         width={"320px"}
         m={"0 auto"}
         textAlign={"center"}
@@ -23,6 +24,8 @@ export const TimeLine: React.FC = () => {
         fontSize={"32px"}
         fontWeight={"bold"}
         marginBottom={"64px"}
+        pt={12}
+        mt={-12}
       >
         Timeline
       </Typography>
@@ -37,7 +40,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: 1,
+              width: "400px",
+            }}
           >
             <Typography>
               I was born in the culturally rich city of Nagoya, Japan
@@ -58,8 +65,8 @@ export const TimeLine: React.FC = () => {
             <Paper
               elevation={4}
               sx={{
-                backgroundColor: "#e3dddd",
-                padding: "10px",
+                backgroundColor: COLOR_CODES.BG,
+                padding: 1,
                 width: "400px",
               }}
             >
@@ -83,7 +90,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: 1,
+              width: "400px",
+            }}
           >
             <Typography>
               A milestone year for me as I successfully graduated from high
@@ -106,8 +117,8 @@ export const TimeLine: React.FC = () => {
             <Paper
               elevation={4}
               sx={{
-                backgroundColor: "#e3dddd",
-                padding: "10px",
+                backgroundColor: COLOR_CODES.BG,
+                padding: 1,
                 width: "400px",
               }}
             >
@@ -130,7 +141,11 @@ export const TimeLine: React.FC = () => {
         <TimelineContent>
           <Paper
             elevation={4}
-            sx={{ backgroundColor: "#e3dddd", padding: "10px", width: "400px" }}
+            sx={{
+              backgroundColor: COLOR_CODES.BG,
+              padding: 2,
+              width: "400px",
+            }}
           >
             <Typography>
               As a significant step towards my academic and career goals, I

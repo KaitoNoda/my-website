@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import { COLOR_CODES } from "@/constants/color-codes";
 import Image from "next/image";
+import { IMAGE_PATHS } from "@/constants/image-paths";
 
 const itemData = [
   {
     img: {
-      src: "/sunset.jpg",
+      src: IMAGE_PATHS.SUNSET,
       width: 600,
       height: 522,
     },
@@ -23,7 +24,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/Champagne.jpg",
+      src: IMAGE_PATHS.CHAMPAGNE,
       width: 600,
       height: 798,
     },
@@ -33,7 +34,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/hanabi.jpg",
+      src: IMAGE_PATHS.HANABI,
       width: 600,
       height: 414,
     },
@@ -43,17 +44,17 @@ const itemData = [
   },
   {
     img: {
-      src: "/art.jpg",
+      src: IMAGE_PATHS.ART,
       width: 600,
       height: 450,
     },
-    title: "No Titile",
+    title: "Art",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
     img: {
-      src: "/breakfast.jpg",
+      src: IMAGE_PATHS.BREAKFAST,
       width: 600,
       height: 798,
     },
@@ -63,7 +64,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/forest.jpg",
+      src: IMAGE_PATHS.FOREST,
       width: 600,
       height: 804,
     },
@@ -73,7 +74,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/winery.jpg",
+      src: IMAGE_PATHS.WINERY,
       width: 600,
       height: 798,
     },
@@ -83,7 +84,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/acai.jpg",
+      src: IMAGE_PATHS.ACAI,
       width: 600,
       height: 768,
     },
@@ -107,7 +108,7 @@ export const MyInterests: React.FC = () => {
   };
 
   return (
-    <Box width={"40%"} margin={"200px auto"}>
+    <Box id={"pictures"} width={"40%"} margin={"200px auto"} pt={12} mt={-12}>
       <Typography
         width={"40%"}
         margin={"0 auto"}
@@ -116,15 +117,18 @@ export const MyInterests: React.FC = () => {
         borderBottom={`solid 1px ${COLOR_CODES.BLACK}`}
         fontSize={"32px"}
         fontWeight={"bold"}
-        mb={"64px"}
+        mb={8}
       >
         Pictures
       </Typography>
       <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item, index) => (
+        {itemData.map((item) => (
           <ImageListItem
-            key={index}
+            key={item.title}
             sx={{
+              width: "100%",
+              height: 0,
+              paddingBottom: `${(item.img.height / item.img.width) * 100}%`,
               position: "relative",
               "&:hover img": {
                 opacity: 0.5,
@@ -135,14 +139,22 @@ export const MyInterests: React.FC = () => {
             }}
             onClick={() => handleClickOpen(item)}
           >
-            <Image
-              src={item.img.src}
-              alt={item.title}
-              height={item.img.height}
-              width={item.img.width}
-              loading="lazy"
-              layout="responsive"
-            />
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Image
+                src={item.img.src}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
 
             <Box
               position={"absolute"}
@@ -151,15 +163,17 @@ export const MyInterests: React.FC = () => {
               color={COLOR_CODES.WHITE}
               pl={1}
               width={"100%"}
+              bgcolor={COLOR_CODES.DARKGRAY}
               sx={{
                 opacity: 0,
-                backgroundColor: COLOR_CODES.DARKGRAY,
                 transition: "opacity 0.3s ease",
               }}
             >
-              <Typography variant="h6">Title: {item.title}</Typography>
+              <Typography component="h2" variant="h6">
+                Title: {item.title}
+              </Typography>
               <Typography variant="body1">Date: {item.date}</Typography>
-              <Typography variant="body1" mb="10px">
+              <Typography variant="body1" mb={1}>
                 Place: {item.place}
               </Typography>
             </Box>
@@ -186,7 +200,7 @@ export const MyInterests: React.FC = () => {
               objectFit: "contain",
             }}
           />
-          <Typography variant="h5" mt={2}>
+          <Typography component="h2" variant="h5" mt={2}>
             Title: {currentItem.title}
           </Typography>
           <Typography variant="body1">Date: {currentItem.date}</Typography>

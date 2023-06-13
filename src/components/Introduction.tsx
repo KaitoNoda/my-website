@@ -3,7 +3,8 @@ import Box from "@mui/system/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import { EXTERNAL_PATHS } from "constants/external-paths";
+import { IMAGE_PATHS } from "@/constants/image-paths";
+import { COLOR_CODES } from "constants/color-codes";
 
 export const Introduction: React.FC = () => {
   return (
@@ -11,15 +12,15 @@ export const Introduction: React.FC = () => {
       elevation={4}
       sx={{
         display: "flex",
-        backgroundColor: "#e3dddd",
-        pl: "10px",
+        backgroundColor: COLOR_CODES.BG,
+        pl: 2,
         width: "1000px",
         height: "350px",
         margin: "150px auto",
-        color: "black",
+        color: COLOR_CODES.BLACK,
       }}
     >
-      <Box flex={"0.7"} mt={"10px"} ml={"20px"}>
+      <Box id={"aboutMe"} flex={"0.7"} ml={"20px"} pt={12} mt={-12}>
         <Typography
           variant={"h1"}
           component={"h1"}
@@ -40,7 +41,7 @@ export const Introduction: React.FC = () => {
       </Box>
       <Box flex={"0.3"}>
         <Image
-          src={EXTERNAL_PATHS.FACE}
+          src={IMAGE_PATHS.FACE}
           alt="My face pic"
           width={420}
           height={350}

@@ -10,7 +10,12 @@ import { COLOR_CODES } from "constants/color-codes";
 
 export const Footer = () => {
   return (
-    <Box bgcolor={COLOR_CODES.BLACK} color={COLOR_CODES.WHITE} p={2}>
+    <Box
+      id="contact"
+      bgcolor={COLOR_CODES.BLACK}
+      color={COLOR_CODES.WHITE}
+      p={2}
+    >
       <Container maxWidth="lg">
         <Typography
           width={"300px"}
@@ -20,7 +25,7 @@ export const Footer = () => {
           borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
           fontSize={"32px"}
           fontWeight={"bold"}
-          mb={"64px"}
+          mb={8}
         >
           Contact
         </Typography>
