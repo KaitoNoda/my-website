@@ -4,7 +4,7 @@ import Box from "@mui/system/Box";
 import { styled } from "@mui/system";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { COLOR_CODES } from "constants/color-codes";
-import { EXTERNAL_LINKS } from "constants/external-links";
+import { SOCIAL_MEDIA_LINKS } from "@/constants/social-media-links";
 
 const HeaderButton = styled(Button)({
   color: COLOR_CODES.BLACK,
@@ -60,14 +60,14 @@ export const Header: React.FC = () => {
         </Box>
         <Box display={"flex"}>
           <IconButton
-            href={EXTERNAL_LINKS.GITHUB}
+            href={SOCIAL_MEDIA_LINKS.GITHUB}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub size={40} />
           </IconButton>
           <IconButton
-            href={EXTERNAL_LINKS.LINKEDIN}
+            href={SOCIAL_MEDIA_LINKS.LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import { COLOR_CODES } from "@/constants/color-codes";
 import Image from "next/image";
+import { IMAGE_PATHS } from "@/constants/image-paths";
 
 const itemData = [
   {
     img: {
-      src: "/sunset.jpg",
+      src: IMAGE_PATHS.SUNSET,
       width: 600,
       height: 522,
     },
@@ -23,7 +24,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/Champagne.jpg",
+      src: IMAGE_PATHS.CHAMPAGNE,
       width: 600,
       height: 798,
     },
@@ -33,7 +34,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/hanabi.jpg",
+      src: IMAGE_PATHS.HANABI,
       width: 600,
       height: 414,
     },
@@ -43,17 +44,17 @@ const itemData = [
   },
   {
     img: {
-      src: "/art.jpg",
+      src: IMAGE_PATHS.ART,
       width: 600,
       height: 450,
     },
-    title: "No Titile",
+    title: "Art",
     date: "May 12, 2022",
     place: "Anglemont, Canada",
   },
   {
     img: {
-      src: "/breakfast.jpg",
+      src: IMAGE_PATHS.BREAKFAST,
       width: 600,
       height: 798,
     },
@@ -63,7 +64,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/forest.jpg",
+      src: IMAGE_PATHS.FOREST,
       width: 600,
       height: 804,
     },
@@ -73,7 +74,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/winery.jpg",
+      src: IMAGE_PATHS.WINERY,
       width: 600,
       height: 798,
     },
@@ -83,7 +84,7 @@ const itemData = [
   },
   {
     img: {
-      src: "/acai.jpg",
+      src: IMAGE_PATHS.ACAI,
       width: 600,
       height: 768,
     },

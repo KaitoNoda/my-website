@@ -1,0 +1,17 @@
+export const IMAGE_PATHS = {
+  FACE: "/face.png",
+  IMG1: "/image1.jpg",
+  IMG2: "/image2.jpg",
+  IMG3: "/image3.jpg",
+  IMG4: "/image4.jpg",
+  IMG5: "/image5.jpg",
+  IMG6: "/image6.jpg",
+  SUNSET: "/sunset.jpg",
+  CHAMPAGNE: "/Champagne.jpg",
+  HANABI: "/hanabi.jpg",
+  ART: "/art.jpg",
+  BREAKFAST: "/breakfast.jpg",
+  FOREST: "/forest.jpg",
+  WINERY: "/winery.jpg",
+  ACAI: "/acai.jpg",
+};

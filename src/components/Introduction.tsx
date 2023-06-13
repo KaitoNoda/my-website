@@ -3,7 +3,7 @@ import Box from "@mui/system/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import { EXTERNAL_PATHS } from "constants/external-paths";
+import { IMAGE_PATHS } from "@/constants/image-paths";
 import { COLOR_CODES } from "constants/color-codes";
 
 export const Introduction: React.FC = () => {
@@ -41,7 +41,7 @@ export const Introduction: React.FC = () => {
       </Box>
       <Box flex={"0.3"}>
         <Image
-          src={EXTERNAL_PATHS.FACE}
+          src={IMAGE_PATHS.FACE}
           alt="My face pic"
           width={420}
           height={350}

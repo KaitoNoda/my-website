@@ -6,7 +6,7 @@ import Box from "@mui/system/Box";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { COLOR_CODES } from "constants/color-codes";
-import { EXTERNAL_PATHS } from "constants/external-paths";
+import { IMAGE_PATHS } from "@/constants/image-paths";
 
 const settings: Settings = {
   className: "center",
@@ -31,12 +31,12 @@ export const Portfolios: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
 
   const images = [
-    { src: EXTERNAL_PATHS.IMG1, index: 0 },
-    { src: EXTERNAL_PATHS.IMG2, index: 1 },
-    { src: EXTERNAL_PATHS.IMG3, index: 2 },
-    { src: EXTERNAL_PATHS.IMG4, index: 3 },
-    { src: EXTERNAL_PATHS.IMG5, index: 4 },
-    { src: EXTERNAL_PATHS.IMG6, index: 5 },
+    { src: IMAGE_PATHS.IMG1, index: 0 },
+    { src: IMAGE_PATHS.IMG2, index: 1 },
+    { src: IMAGE_PATHS.IMG3, index: 2 },
+    { src: IMAGE_PATHS.IMG4, index: 3 },
+    { src: IMAGE_PATHS.IMG5, index: 4 },
+    { src: IMAGE_PATHS.IMG6, index: 5 },
   ];
 
   const handleClick = (index: number) => {
