@@ -53,7 +53,7 @@ export const Footer = () => {
             <IconButton color="inherit">
               <PhoneIcon />
             </IconButton>
-            <Typography variant="h5">+1(236)-516-9943</Typography>
+            <Typography variant="h5">+1(604)-830-4784</Typography>
           </Box>
         </Box>
       </Container>

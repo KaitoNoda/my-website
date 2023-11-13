@@ -34,9 +34,8 @@ export const Introduction: React.FC = () => {
         <Typography variant={"body1"} component={"p"} fontSize={"20px"}>
           First of all, thank you for visiting my website. I am glad you took
           this opportunity to know me more. I am originally from Japan and am
-          currently a <strong>computer science student</strong> at the
-          University of British Columbia (UBC). My goal is to become an expert
-          <strong> software engineer</strong> specializing in web development.
+          currently a student at the
+          University of British Columbia (UBC). 
         </Typography>
       </Box>
       <Box flex={"0.3"}>
