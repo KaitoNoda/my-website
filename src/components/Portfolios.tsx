@@ -62,7 +62,7 @@ export const Portfolios: React.FC = () => {
         borderBottom={`solid 1px ${COLOR_CODES.WHITE}`}
         fontSize={"30px"}
       >
-        Portfolios
+        Portfolio (Coming Soon)
       </Typography>
       <Slider dots ref={sliderRef} {...settings}>
         {images.map((image) => (

@@ -71,9 +71,7 @@ export const TimeLine: React.FC = () => {
               }}
             >
               <Typography>
-                Eager to gain practical experience, I secured a jobat the
-                Marriott Hotel in Nagoya where I worked for the next three
-                years.
+              When I was 17 years old, I was eager to gain practical experience and start to save to pay for my university study abroad. I was successful in getting a job at the Marriott Hotel in Nagoya where I worked for three years.
               </Typography>
             </Paper>
           </Box>
@@ -97,9 +95,7 @@ export const TimeLine: React.FC = () => {
             }}
           >
             <Typography>
-              A milestone year for me as I successfully graduated from high
-              school in my hometown, Nagoya, and continuing my job at the
-              Marriott.
+            A milestone for me was successfully graduated from high school while I continued my job at Marriott. 
             </Typography>
           </Paper>
         </TimelineContent>
@@ -123,8 +119,7 @@ export const TimeLine: React.FC = () => {
               }}
             >
               <Typography>
-                Eager to see the world and to pursue higher education, I
-                embarked on a new adventure, relocating to Canada.
+              I was eager to see the world and pursue my life-long goal of studying abroad and so moved to Canada to follow my dream.
               </Typography>
             </Paper>
           </Box>
@@ -132,7 +127,7 @@ export const TimeLine: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          2022
+          2023
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />
@@ -148,9 +143,7 @@ export const TimeLine: React.FC = () => {
             }}
           >
             <Typography>
-              As a significant step towards my academic and career goals, I
-              enrolled in a Bachelor of Science degree program at the
-              prestigious University of British Columbia in Canada.
+            As a significant step towards my academic and life goals, I have decided to pursue Architecture as my career. I am excited for what future holds.
             </Typography>
           </Paper>
         </TimelineContent>

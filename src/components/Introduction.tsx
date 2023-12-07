@@ -32,10 +32,7 @@ export const Introduction: React.FC = () => {
           Here is who I am
         </Typography>
         <Typography variant={"body1"} component={"p"} fontSize={"20px"}>
-          First of all, thank you for visiting my website. I am glad you took
-          this opportunity to know me more. I am originally from Japan and am
-          currently a student at the
-          University of British Columbia (UBC). 
+        My name is Kaito Noda. Welcome to my personal website. I am glad you took this opportunity to know me more. Originally born and raised in Japan, I designed and created this website on my own. As a university student in Canada my interests are Designing (especially architecture), Shodo (Japanese Calligraphy), Languages, Travelling, and Art.
         </Typography>
       </Box>
       <Box flex={"0.3"}>
