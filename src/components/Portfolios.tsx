@@ -55,7 +55,7 @@ export const Portfolios: React.FC = () => {
       bgcolor={COLOR_CODES.BLACK}
     >
       <Typography
-        width={"250px"}
+        width={"350px"}
         mb={7}
         ml={25}
         color={COLOR_CODES.WHITE}
