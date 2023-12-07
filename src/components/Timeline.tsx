@@ -95,7 +95,7 @@ export const TimeLine: React.FC = () => {
             }}
           >
             <Typography>
-            A milestone for me was successfully graduated from high school while I continued my job at Marriott. 
+            A milestone for me was successfully graduating from high school while I continued my job at Marriott. 
             </Typography>
           </Paper>
         </TimelineContent>
